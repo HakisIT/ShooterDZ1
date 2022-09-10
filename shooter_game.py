@@ -21,6 +21,7 @@ class Picture(sprite.Sprite):
         window.blit(self.image, (self.rect.x, self.rect.y))
  
  
+ 
 class Player(Picture):
     def update(self):
         keys = key.get_pressed()
@@ -35,6 +36,7 @@ class Player(Picture):
         ballet = Bullet(player.rect.centerx, player.rect.top, bullet, 20, 50)
         bullets.add(ballet)
  
+
  
 class Bullet(Picture):
     def update(self):
@@ -55,6 +57,7 @@ enemies = sprite.Group()
 for i in range(10):
     ufo = UFO(random.randint(0,400), -100, enemy, 400, 300)
     enemies.add(ufo)
+    print("1")
     
 win_width = 700
 win_height = 500
